@@ -82,7 +82,7 @@ class Blocks {
             element.currentTime = 0
             setTimeout(() => {
                 element.play()
-            }, 1000)
+            }, 10)
 
         });
     }
@@ -123,14 +123,15 @@ class Blocks {
 
 
             } else {
+                console.log("wrong!")
+                this.playSet("wrong")
 
                 for (i = 0; i < this.blocks.length; i++) {
                     this.blocks[i].el.addClass("notclick")
                         // console.log("add finish: " + i)
 
                 }
-                console.log("wrong!")
-                this.playSet("wrong")
+
 
                 setTimeout(() => {
                     this.firstBlock.el.removeClass("open show")
